@@ -30,7 +30,7 @@
         ?>
             
         <h2>PHP Validation Example</h2>
-        <form method = "post" action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> 
+        <form method = "post" action = " <?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"> 
             
             Name: <input type = "text" name = "name"> <br>
             
@@ -53,13 +53,18 @@
     </form>
 
     <?php
-    
+
     echo "<h2>Your Input</h2>";
-    echo $name . "<br>";
-    echo $email . "<br>";
-    echo $website . "<br>";
-    Echo $comment . "<br>";
-    echo $gender . "<br>";
+    echo "<br>";
+    echo $name;
+    echo "<br>";
+    echo $email;
+    echo "<br>";
+    echo $website;
+    echo "<br>";
+    echo $comment;
+    echo "<br>";
+    echo $gender;
     
     ?>
 

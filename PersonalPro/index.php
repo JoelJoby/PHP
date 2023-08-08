@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <a href ="link.php?subject=PHP&web=W3schools.com">Test $GET</a>
+    <?php
+
+    echo "hello ";
+    $name = 'Mohammad';
+    echo $name;
+
+    ?>
 </body>
 </html>
