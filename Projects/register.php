@@ -9,6 +9,43 @@
 <body>
     <div class="container">
         <div class="box form-box">
+
+        <?php
+
+            include("php/config.php");
+            if(isset($_POST['submit']))
+            {
+                $username = $_POST['username'];
+                $email = $_POST['email'];
+                $age = $_POST['age'];
+                $password = $_POST['password'];
+
+                //Verifing the unique email
+
+                $verify_query = mysqli_query($con,"SELECT email FROM users WHERE email='$email'");
+                if(mysqli_num_rows($verify_query) !=0)
+                {
+                    echo "<div class='message'>
+                    <p>This email is already used, Try another one please!</p>
+                    </div> </br>";
+                    echo "<a href='javascript:self.history.back()'><button class = 'btn'>Go Back</button>";
+                }
+
+                else
+                {
+                    mysqli_query($con,"INSERT INTO users(username,email,age,PASSWORD) VALUES ('$username','$email','$age','$password')") or die("Error Occured");
+
+                    echo "<div class='message'>
+                    <p>Registration Successfull!</p>
+                    </div> </br>";
+                    echo "<a href='index.php'> <button class='btn'>Login Now</button>";
+                }
+                
+            } 
+            
+            else{
+
+        ?>
             <header>Sign In</header>
             <form action="" method="post">
 
@@ -37,12 +74,13 @@
                 </div>
 
                 <div class="links">
-                    Already a member? <a href="Login.html">Log In</a>
+                    Already a member? <a href="Login.php">Log In</a>
                 </div>
 
 
             </form>
         </div>
+        <?php }?>
     </div>
     
 </body>

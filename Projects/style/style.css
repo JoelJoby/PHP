@@ -112,7 +112,12 @@ body
 {
     font-size: 25px;
     font-weight: 900;
+}
 
+.logo a
+{
+    text-decoration: none;
+    color: #000;
 }
 
 .right-links a
