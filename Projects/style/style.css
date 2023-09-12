@@ -173,3 +173,14 @@ main
     }
 
 }
+
+.message
+{
+    text-align: center;
+    background: #f9edf9;
+    border: 1px solid #699053;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: red;
+
+}

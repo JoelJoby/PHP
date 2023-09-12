@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Sign Uo</title>
+    <title>Sign Up</title>
 </head>
 <body>
     <div class="container">
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="filed">
-                    <input type="submit" class="btn" name="submit" value="Sign In">
+                    <input type="submit" class="btn" name="submit" value="Register">
                 </div>
 
                 <div class="links">
