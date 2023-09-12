@@ -35,10 +35,12 @@
                 {
                     mysqli_query($con,"INSERT INTO users(username,email,age,PASSWORD) VALUES ('$username','$email','$age','$password')") or die("Error Occured");
 
-                    echo "<div class='message'>
-                    <p>Registration Successfull!</p>
-                    </div> </br>";
-                    echo "<a href='index.php'> <button class='btn'>Login Now</button>";
+                    // echo "<div class='message'>
+                    // <p>Registration Successfull!</p>
+                    // </div> </br>";
+                    // echo "<a href='index.php'> <button class='btn'>Login Now</button>";
+                    echo "<script type='text/javascript'>alert('Registration Successfull!');window.location='login.php'; </script>";
+
                 }
                 
             } 

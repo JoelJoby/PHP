@@ -32,17 +32,16 @@
                         $_SESSION['age'] = $row['age'];
                         $_SESSION['id'] = $row['id'];
                     }
-
-                    elseif(isset($_SESSION['valid']))
-                    {
-                        header("Location: home.php");
-                    }   
                     
                     else
                     {
                         echo "<script type='text/javascript'>alert('Invalid Email or Password');window.location='login.php'; </script>";
                     }
 
+                    if(isset($_SESSION['valid']))
+                    {
+                        header("Location: home.php");
+                    }   
                     
                 }
                 else
